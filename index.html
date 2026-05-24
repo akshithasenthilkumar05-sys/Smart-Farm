@@ -2,48 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Farm Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farm Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>🌱 Smart Farm Monitoring System</h1>
-        <p>IoT Based Agriculture Dashboard</p>
+        <div class="header-content">
+            <h1>🌱 Smart Farm Monitoring</h1>
+            <p>IoT Based Agriculture Dashboard</p>
+        </div>
+
+        <div id="clock"></div>
     </header>
 
+    <!-- Dashboard -->
     <section class="dashboard">
+
         <div class="card">
-            <h2>Soil Moisture</h2>
-            <p>45%</p>
+            <h2>🌾 Soil Moisture</h2>
+            <div class="progress">
+                <div class="progress-bar moisture">45%</div>
+            </div>
+            <span>Optimal Level</span>
         </div>
 
         <div class="card">
-            <h2>Temperature</h2>
-            <p>28°C</p>
+            <h2>🌡 Temperature</h2>
+            <p class="value">28°C</p>
+            <span>Normal Weather</span>
         </div>
 
         <div class="card">
-            <h2>Humidity</h2>
-            <p>60%</p>
+            <h2>💧 Humidity</h2>
+            <div class="progress">
+                <div class="progress-bar humidity">60%</div>
+            </div>
+            <span>Balanced Humidity</span>
         </div>
 
         <div class="card">
-            <h2>Light Intensity</h2>
-            <p>High</p>
+            <h2>☀ Light Intensity</h2>
+            <p class="value">High</p>
+            <span>Good Sunlight</span>
         </div>
+
     </section>
 
+    <!-- Irrigation Control -->
     <section class="control">
-        <h2>Irrigation Control</h2>
-        <button>Turn ON Pump</button>
-        <button class="off">Turn OFF Pump</button>
+
+        <h2>🚿 Irrigation Control</h2>
+
+        <div class="status">
+            Pump Status:
+            <span id="pumpStatus">OFF</span>
+        </div>
+
+        <div class="buttons">
+            <button id="onBtn">Turn ON Pump</button>
+            <button id="offBtn" class="off">Turn OFF Pump</button>
+        </div>
+
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Smart Farm Project</p>
+        <p>© 2026 Smart Farm Monitoring System</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
